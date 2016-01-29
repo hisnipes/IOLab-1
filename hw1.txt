@@ -1,0 +1,10 @@
+HW 1
+
+1. Change Directory: cd Desktop
+2. Create a Directory: mkdir Homework
+3. Rename a Directory: mv OldName NewName
+4. List the contents of a directory: ls -l
+5. Move a file to a new location: mv Hw1.txt ~/Desktop
+6. Copy a file to a new location: cp Hw2.txt ~/Downloads
+7. Search for a string in a file: grep "foo" Hw3.txt
+8. Access the shell of a remote machine: ssh root@192.122.1.172
