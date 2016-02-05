@@ -124,15 +124,29 @@ a.nav-button:visited {
 /*START HERE*/
 
 .other-news-container {
+	float: left;
+	width: 29%;
+	padding: 0px 30px 30px 30px;
+	border-right: 1px solid #333;
+	text-align: center;
+}
 
+.other-news-container img {
+	margin: 10px 0px;
 }
 
 .main-container {
-	
+	float: left;
+	width: 65%;
+	margin-left: 10px;
+	text-align: center;
 }
 
 .ib-grid-item {
-	
+	display: inline-block;
+	width: 28%;
+	margin: 10px 20px 40px 20px;
+	text-align: center;
 }
 
 .ib-grid-item img {
@@ -140,5 +154,5 @@ a.nav-button:visited {
 }
 
 .other-news-item {
-	
+	display: block;
 }

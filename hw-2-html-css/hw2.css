@@ -1,0 +1,257 @@
+/********** RESET **********/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/********** CONTENT **********/
+
+body {
+	font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+	background: #fff;
+}
+
+h1, h2, h3 {
+	color: #023a62;
+}
+
+h1 {
+	font-size: 1.563em;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 1.30em;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 1.20em;
+	font-weight: 500;
+}
+
+p {
+	font-size: 0.875em;
+	font-weight: 300;
+}
+
+header {
+	background: #24204e; 
+	background: -webkit-linear-gradient(left, #24204e, #025262); 
+	background: -moz-linear-gradient(left, #24204e, #025262); 
+	background: -ms-linear-gradient(left, #24204e, #025262); 
+	background: -o-linear-gradient(left, #24204e, #025262); 
+	background: linear-gradient(to right, #24204e, #025262);
+	width: 100%;
+	min-height: 75px;
+	padding: 10px 0px;
+	display: block;
+	border-bottom: 8px solid #0491ad;
+}
+
+.container, #content .container {
+	width: 1200px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo {
+	float: left;
+	margin-top: 5px;
+	display: inline-block;
+}
+	#logo img {
+		max-width: 300px;
+	}
+
+.tagline {
+	display: inline-block;
+	margin: 23px 0px 0px 15px;
+	font-size: 14px;
+	font-style: italic;
+	color: white;
+}
+
+nav {
+	float: right;
+	margin-top: 20px;
+}
+	nav a {
+		color: white;
+		font-size: 12px;
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		margin: 0px 10px;
+	}
+	nav a:last-of-type {
+		margin-right: 0px;
+	}
+
+#content {
+
+}
+	
+	#content .container {
+		display: flex;
+		padding: 20px 0px;
+	}
+
+	#content header {
+		background: transparent;
+		border-bottom: none;
+		margin-bottom: 5px;
+		min-height: 0px;
+		padding: 0px;
+	}
+
+	#content header h2 {
+
+	}
+
+	#content aside .sidebar-section {
+		border-bottom: 1px solid #eee;
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+	}
+
+		#content aside .sidebar-section:last-of-type {
+			border-bottom: none;
+		}
+
+		#content .sidebar-section .blogger-list .blogger {
+			display: block;
+			display: flex;
+			margin-bottom: 10px;
+		}
+
+		#content .sidebar-section .blogger-list img {
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		#content .sidebar-section .blogger-list p {
+			display: inline-block;
+			margin-top: 20px;
+		}
+
+	#content aside {
+		width: 400px;
+		float: left;
+		padding: 20px 0px;
+	}
+
+		#content aside h2 {
+			margin-bottom: 20px;
+		}
+
+		#content aside a {
+			display: block;
+			margin: 10px 0px;
+			text-decoration: none;
+			color: #a0bf90;
+		}
+
+	#content .story-list {
+		float: left;
+		padding: 20px 50px;
+	}
+
+	#content .story-list article {
+		margin-bottom: 30px;
+	}
+
+		.post-preview {
+			display: flex;
+		}
+
+		.post-preview .thumbnail {
+			max-width: 200px;
+			max-height: 150px;
+		}
+
+		.post-preview .preview-excerpt {
+			padding: 10px 30px;
+		}
+
+			.preview-excerpt .author, .preview-excerpt .post-date, .preview-excerpt .separator {
+				display: inline-block;
+				color: #023a62;
+			}
+
+			.preview-excerpt .author, .preview-excerpt .post-date {
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				font-size: 11px;
+				margin-bottom: 10px;
+			}
+
+			.preview-excerpt .separator {
+				margin: 0px 10px;
+			}
+
+			.preview-excerpt .excerpt {
+				line-height: 145%;
+			}
+
+			.preview-excerpt .read-more {
+				font-style: italic;
+				text-decoration: none;
+				color: #a0bf90;
+			}
+
+footer {
+	width: 100%;
+	text-align: center;
+	padding: 20px 0px;
+	background: #012830;
+	color: white;
+}
+
