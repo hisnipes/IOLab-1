@@ -1,0 +1,81 @@
+/*********************************  
+LAPTOP 
+*********************************/
+@media (min-width:1281px) { 
+	
+}
+
+
+/********************************* 
+IPAD - PORTRAIT & LANDSCAPE 
+*********************************/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+	body {
+		background: #fff;
+	}
+	#row {
+		display: block;
+	}
+	#page-left {
+		display: block;
+		width: 100%;
+	}
+	#page-right {
+		width: 100%;
+	}
+	#profile {
+		margin-top: 20px;
+	}
+	.profile-connect {
+		margin: 0px auto 23px;
+	}
+}
+
+
+
+/*********************************  
+IPHONE 6 - PORTRAIT & LANDSCAPE
+*********************************/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+	body {
+		background: #fff;
+	}
+	p, a, ul, li {
+		font-size: 18px;
+		line-height: 175%;
+	}
+	h1 {
+		font-size: 60px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 22px;
+	}
+	#row {
+		display: block;
+	}
+	#page-left {
+		display: block;
+		width: 100%;
+	}
+	#page-right {
+		width: 100%;
+	}
+	#profile {
+		margin-top: 20px;
+	}
+	.profile-connect {
+		margin: 0px auto 23px;
+	}
+}
+
+
+
