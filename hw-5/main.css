@@ -1,0 +1,276 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*************************************************/
+@font-face {
+	font-family: 'Interstate';
+	src: url('fonts/Interstate-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Interstate';
+	src: url('fonts/Interstate-Light.ttf');
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family: 'Interstate';
+	src: url('fonts/Interstate-Bold.ttf');
+	font-weight: bold;
+}
+
+
+/*************************************************/
+
+html {
+	height: 100%;
+	background: #ff3700; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #ff3700 0%, #ff7600 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #ff3700 0%,#ff7600 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #ff3700 0%,#ff7600 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3700', endColorstr='#ff7600',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+body {
+	font-family: "Interstate", "Lucia Grande", "Helvetica Neue", sans-serif;
+	color: #222;
+}
+
+h1, h2, h3 {
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #999;
+}
+
+p {
+	font-size: 14px;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+ul li {
+	margin-bottom: 15px;
+	line-height: 150%;
+}
+
+#wrapper {
+	padding: 50px;
+}
+
+.banner {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.instructions {
+	margin-top: 10px;
+	padding: 0px 60px;
+	text-align: center;
+	line-height: 175%;
+}
+
+textarea:focus, input:focus, button:focus {
+	outline: none;
+}
+
+#table-container {
+	width: 100%;
+}
+
+#results-container, #playlist-container {
+	font-family: "Interstate", "Lucia Grande", "Helvetica Neue", sans-serif;
+	font-weight: lighter;
+	display: inline-block;
+	border-radius: 3px;
+	margin: 50px auto 0px;
+	width: 44%;
+	padding: 30px;
+	height: 500px;
+	overflow-y: scroll;
+	background-color: #e64d00;
+	color: #fff;
+}
+#results-container {
+	float: left;
+	margin-right: 30px;
+}
+	.resultPicture {
+		width: 15%;
+	}
+	.new-item {
+		display: inline-block;
+		width: 80%;
+		padding: 0;
+		margin: 0 0 0 20px;
+		vertical-align: top;
+	}
+		.resultAlbum {
+			display: inline-block;
+		}
+		.resultArtist {
+			font-size: 12px;
+			color: #ffc7ab;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+		.resultSong {
+			word-wrap: break-word;
+		}
+		#play-btn, #add-btn, .remove {
+			background-color: transparent;
+		    border: 1px solid white;
+		    color: white;
+		    padding: 5px 7px;
+		    text-transform: uppercase;
+		    font-size: 8px;
+		    letter-spacing: 0.25em;
+		    border-radius: 5px;
+		}
+			#play-btn, #add-btn {
+				margin: 7px 10px 0px 0px;
+			}
+			#play-btn:hover, #add-btn:hover, .remove:hover {
+				background-color: #ff5500;
+				cursor: pointer;
+			}
+#playlist-container {	
+}
+	#playlist ul li {
+		border-bottom: 1px solid #ff7734;
+		padding: 25px 0px;
+		margin-bottom: 0px;
+	}
+		#playlist ul li:first-of-type {
+			padding-top: 0px;
+		}
+		#playlist ul li:last-of-type {
+			border-bottom: none;
+		}
+	.playlist-left {
+		display: inline-block;
+		width: 10%; /* account for long titles */
+		float: left;
+		clear: left;
+	}
+		.playlist-left .move-arrows {
+			margin-top: 5px;
+		}
+		.playlist-left input {
+			display: block;
+			float: none;
+			clear: both;
+		}
+		.playlist-left .up {
+			margin-bottom: 10px;
+		}
+	.playlist-middle {
+		display: inline-block;
+		width: 70%;
+	}
+	.playlist-right {
+		display: inline-block;
+		width: 20%;
+		float: right;
+		text-align: right;
+	}
+		.playlist-right button {
+			display: block;
+			clear: both;
+			float: right;
+		}
+		.playlist-right #play-btn {
+			margin: 0px 0px 7px 0px;
+		}
+		.playlist-right .remove {
+			border: 1px solid #ff7734;
+		}
+
+#songSearchField {
+	margin-top: 25px;
+	text-align: center;
+}
+	#songSearch {
+		font-family: "Interstate", "Lucia Grande", "Helvetica Neue", sans-serif;
+		width: 50%;
+		height: 30px;
+		font-size: 16px;
+		padding: 5px 10px;
+		margin-top: 20px;
+		border-radius: 3px;
+		border: 0;
+	}
+	#submit-btn {
+		font-family: "Interstate", "Lucia Grande", "Helvetica Neue", sans-serif;
+		background-color: #fff;
+		font-size: 14px;
+		border: 0;
+		padding: 12px 15px 10px 12px;
+		margin: 20px 0px 0px 10px;
+		border-radius: 5px;
+	}
+
