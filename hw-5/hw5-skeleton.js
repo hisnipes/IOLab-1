@@ -77,6 +77,8 @@ function processSoundCloud(data) {
 		var resultPicture = data[i]["artwork_url"]
 		var resultPermalink = data[i]["permalink_url"]
 
+		console.log(data[i]["tag_list"]);
+
 		if (resultPicture === null) {
 			resultPicture = "img/placeholder.png"
 		}
