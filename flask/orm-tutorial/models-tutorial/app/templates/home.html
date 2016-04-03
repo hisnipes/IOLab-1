@@ -2,30 +2,68 @@
 {% block content %}
   <div class="container">
     <div class="row">
-      <h1>Welcome to ACME Aircraft Parts</h1>
-      <div class= "section">
-        <a href="{{ url_for('create_customer') }}">Add a Customer</a>
+
+      <h1>ACME Aircraft Parts</h1>
+
+      <div class="menu section">
+        <a class="btn" href="{{ url_for('create_customer') }}">Add a Customer</a>
       </div>
-      <div class="divider"></div>
-      <div class="section">
-        <h3>These are all of our awesome customers:</h3>
+
+      <div class="card-panel section">
+
+        <h3>Customer List</h3>
+
         <table class="striped">
+
           <thead>
             <tr>
+              <th data-field="first_name">Full Name</th>
               <th data-field="company">Company</th>
               <th data-field="email">Email</th>
+              <th data-field="phone">Phone</th>
+              <th data-field="details"></th>
             </tr>
           </thead>
+
           {% for customer in customers %}
-          <!-- {% for address in customer.addresses %}
-          {% endfor %} -->
             <tr>
+              <td>{{ customer.first_name }} {{ customer.last_name }}</td>
               <td>{{ customer.company }}</td>
               <td>{{ customer.email }}</td>
+              <td>{{ customer.phone }}</td>
+              <td><a href="{{ url_for('display_customer_info', customer_id=customer.id) }}">Details</a></td>
             </tr>
           {% endfor %}
+
         </table>
-      </div>
-    </div>
-  </div>
+
+      </div><!-- /section -->
+
+      <div class="card-panel section">
+
+        <h3>Order List</h3>
+
+        <table class="striped">
+
+          <thead>
+            <tr>
+              <th data-field="first_name">Total Spent</th>
+              <th data-field="company"># of Parts Ordered</th>
+            </tr>
+          </thead>
+
+          {% for order in orders %}
+            <tr>
+              <td>${{ order.total_spent }}</td>
+              <td>{{ order.num_parts_ordered }}</td>
+            </tr>
+          {% endfor %}
+
+        </table>
+
+      </div><!-- /section -->
+
+
+    </div><!-- /row -->
+  </div><!-- /container -->
 {% endblock %}

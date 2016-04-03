@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+
+      <h1>ACME Aircraft Parts</h1>
+
+      <div class="menu section">
+        <a class="btn" href="{{ url_for('display_customer') }}">Home</a>
+      </div>
+
+      <div class="card-panel">
+
+        {% if first_name and last_name %}
+          <h4>Add Address for {{ first_name }} {{ last_name }}</h4>
+        {% else %}
+          <h4>Add Address for Customer</h4>
+        {% endif %}
+
+        <form action="" method="post" name="login">
+          {{ form.hidden_tag() }}
+          <div class="section">
+            <p><strong>Street Address</strong></p>
+              {{ form.street_address }}
+
+            <p><strong>City</strong></p>
+              {{ form.city }}
+
+            <p><strong>State</strong></p>
+              {{ form.state }}
+
+            <p><strong>Country</strong></p>
+              {{ form.country }}
+
+            <p><strong>Zip code</strong></p>
+              {{ form.zip_code }}
+          </div>
+
+          <input class="btn" type="submit" value="Add Address">
+        </form>
+      </div>
+
+    </div><!-- /row -->
+  </div><!-- /container -->
+{% endblock %}

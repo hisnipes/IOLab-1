@@ -1,30 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-  <div class="row">
-    <div class= "section">
-      <a href="{{ url_for('display_customer') }}">Home</a>
-    </div>
-    <h2>Add Customer to Our Database</h2>
-    <form action="" method="post" name="login">
-      {{ form.hidden_tag() }}
-      <div class="divider"></div>
-      <div class="section">
-        <p>
-          Company name:<br>
-          {{ form.company(size=120) }}<br>
-        </p>
-        <p>
-          Customer email:<br>
-          {{ form.email(size=120) }}<br>
-        </p>
+  <div class="container">
+    <div class="row">
+
+      <h1>ACME Aircraft Parts</h1>
+
+      <div class="menu section">
+        <a class="btn" href="{{ url_for('display_customer') }}">Home</a>
       </div>
-      <div class="divider"></div>
-      <div class="section">
-        <!-- Additional form fields for the Address should go here -->
+
+      <div class="card-panel">
+
+        <h4>Add Customer to Our Database</h4>
+
+        <form action="" method="post" name="login">
+          {{ form.hidden_tag() }}
+          <div class="section">
+            <p><strong>First Name</strong></p>
+              {{ form.first_name }}
+
+            <p><strong>Last Name</strong></p>
+              {{ form.last_name }}
+
+            <p><strong>Company</strong></p>
+              {{ form.company }}
+
+            <p><strong>Email Address</strong></p>
+              {{ form.email }}
+
+            <p><strong>Phone</strong></p>
+              {{ form.phone }}
+          </div>
+          
+          <input class="btn" type="submit" value="Create Customer">
+
+        </form>
       </div>
-      <p><input type="submit" value="Create Customer"></p>
-    </form>
-  </div>
-</div>
+
+    </div><!-- /row -->
+  </div><!-- /container -->
 {% endblock %}

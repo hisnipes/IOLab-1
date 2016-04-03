@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+
+      <h1>ACME Aircraft Parts</h1>
+
+      <div class="menu section">
+        <a class="btn" href="{{ url_for('display_customer') }}">Home</a>
+      </div>
+
+      <div class="card-panel">
+
+        {% if first_name and last_name %}
+          <h4>Add New Order for {{ first_name }} {{ last_name }}</h4>
+        {% else %}
+          <h4>Add New Order for Customer</h4>
+        {% endif %}
+
+        <form action="" method="post" name="login">
+          {{ form.hidden_tag() }}
+          <div class="section">
+            <p><strong>Number of Parts Ordered</strong></p>
+              {{ form.num_parts_ordered }}
+
+            <p><strong>Total Spent</strong></p>
+              {{ form.total_spent }}
+          </div>
+
+          <input class="btn" type="submit" value="Create Order">
+
+        </form>
+      </div>
+
+    </div><!-- /row -->
+  </div><!-- /container -->
+{% endblock %}

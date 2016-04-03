@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+
+      <h1>ACME Aircraft Parts</h1>
+
+      <div class="menu section">
+        <a class="btn" href="{{ url_for('display_customer') }}">Home</a>
+        <a class="btn" href="{{ url_for('add_address', customer_id=customer.id) }}">Add Address</a>
+        <a class="btn" href="{{ url_for('create_order', customer_id=customer.id) }}">Create Order</a>
+        <a class="btn" href="{{ url_for('create_customer') }}">New Customer</a>
+      </div>
+
+      <div class="card-panel section">
+        <h4>Customer</h4>
+        <p><strong>Name:</strong></p>
+          {{ customer.first_name }} {{ customer.last_name }}
+        <p><strong>Company:</strong></p> 
+          {{ customer.company }}
+        <p><strong>Email:</strong></p> 
+          {{ customer.email }}
+        <p><strong>Phone:</strong></p>
+          {{ customer.phone }}
+      </div>
+      
+      <div class="card-panel section">
+        <h4>Addresses</h4>
+        <table class="striped">
+          <thead>
+            <tr>
+              <th data-field="street_adress">Street Address</th>
+              <th data-field="city">City</th>
+              <th data-field="state">State</th>
+              <th data-field="country">Country</th>
+              <th data-field="zip_code">Zip Code</th>
+            </tr>
+          </thead>
+          {% for address in customer.addresses %}
+            <tr>
+              <td>{{ address.street_address }} </td>
+              <td>{{ address.city }}</td>
+              <td>{{ address.state }}</td>
+              <td>{{ address.country }}</td>
+              <td>{{ address.zip_code }}</td>
+          {% endfor %}
+        </table>
+      </div>
+      
+      <div class="card-panel section">
+        <h4>Orders</h4>
+        <table class="striped">
+          <thead>
+            <tr>
+              <th data-field="total_spent">Total Spent</th>
+              <th data-field="num_parts_ordered">Number of Parts Ordered</th>
+            </tr>
+          </thead>
+          {% for order in orders %}
+            <tr>
+              <td>${{ order.total_spent }}</td>
+              <td>{{ order.num_parts_ordered }}</td>
+          {% endfor %}
+        </table>
+      </div>
+
+    </div><!-- /row -->
+  </div><!-- /container -->
+{% endblock %}

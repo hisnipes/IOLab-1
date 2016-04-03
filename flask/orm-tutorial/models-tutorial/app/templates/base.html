@@ -1,14 +1,17 @@
 <html>
+
   <head>
     {% if title %}
     <title>{{ title }} - ACME</title>
     {% else %}
-    <title>Welcome to ACME Aircraft Parts</title>
+    <title>ACME Aircraft Parts</title>
     {% endif %}
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   </head>
-  <body>
+
+  <body class="#b2dfdb teal lighten-4">
     {% block content %}{% endblock %}
   </body>
+
 </html>
